@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>contractwatch — your api contract, guarded</title>
+<meta name="description" content="Catch breaking FastAPI changes before your clients do. Snapshot your OpenAPI contract, fail the commit or CI run when a change would break clients.">
+<meta property="og:title" content="contractwatch — your api contract, guarded">
+<meta property="og:description" content="Catch breaking FastAPI changes before your clients do.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://himanshu007-creator.github.io/contractwatch/">
+<meta property="og:image" content="https://himanshu007-creator.github.io/contractwatch/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://himanshu007-creator.github.io/contractwatch/img/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link href="style.css?v=1.0.0" rel="stylesheet">
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="#">contractwatch</a>
+  <a href="https://github.com/himanshu007-creator/contractwatch">github ↗</a>
+</nav>
+
+<main>
+  <section class="hero">
+    <h1>your api contract,<br>guarded.</h1>
+    <p class="lede">You rename a response field, your tests pass, the frontend breaks.
+      contractwatch snapshots your FastAPI contract and fails the commit or CI run when a change would break clients.</p>
+    <div class="cmd">
+      <code id="cmd">pip install contractwatch</code>
+      <button id="copy" type="button">copy</button>
+    </div>
+    <p class="fine">python 3.11+ · fastapi · pydantic v2 · mit</p>
+    <img class="shot" src="img/check-fail.svg" alt="contractwatch check blocking a removed endpoint and a removed response field">
+  </section>
+
+  <section>
+    <h2>use it</h2>
+    <ol class="steps">
+      <li><b>init</b> — <code>contractwatch init</code> saves the current contract as the baseline. commit it.</li>
+      <li><b>check</b> — <code>contractwatch check</code> compares against it. exit <code>0</code> safe, <code>1</code> blocking, <code>2</code> error.</li>
+      <li><b>accept</b> — changed the api on purpose? <code>contractwatch baseline update</code>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>what it catches</h2>
+    <ul class="list">
+      <li><b>breaking changes</b> removed endpoints, removed or retyped fields, newly required inputs, narrowed enums.</li>
+      <li><b>schema collisions</b> two models with the same name in different modules.</li>
+      <li><b>reliability pitfalls</b> blocking calls in async endpoints, missing timeouts, duplicate routes.</li>
+    </ul>
+    <p>every finding says what broke, who it hurts, and how to fix it.</p>
+    <img class="shot" src="img/collision.svg" alt="contractwatch check warning about two models named Item">
+  </section>
+
+  <section>
+    <h2>diagnostic codes</h2>
+    <div id="codes" class="rows"></div>
+  </section>
+
+  <section>
+    <h2>ci and pre-commit</h2>
+    <p><code>contractwatch init</code> offers to install the pre-commit hook. in ci, run <code>contractwatch check</code> — the exit code does the rest.</p>
+  </section>
+
+  <section>
+    <h2>questions</h2>
+    <div id="faq"></div>
+  </section>
+</main>
+
+<footer>
+  <a href="https://github.com/himanshu007-creator/contractwatch#readme">readme ↗</a> ·
+  <a href="https://pypi.org/project/contractwatch/">pypi ↗</a> ·
+  <a href="https://github.com/himanshu007-creator/contractwatch/issues">issues ↗</a> ·
+  <a href="https://github.com/himanshu007-creator/contractwatch/blob/main/LICENSE">mit license ↗</a>
+</footer>
+<script src="app.js?v=1.0.0"></script>
+</body>
+</html>

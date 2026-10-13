@@ -1,0 +1,30 @@
+:root{--bg:#0e1116;--fg:#d8dee9;--dim:#7b8494;--line:#222a35;--acc:#7ee787;--err:#ff6b6b;--warn:#e3b341;--info:#79c0ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+code{color:var(--acc)}
+.topbar{display:flex;justify-content:space-between;max-width:760px;margin:0 auto;padding:20px 16px}
+.brand{color:var(--fg);font-weight:700}
+main{max-width:760px;margin:0 auto;padding:0 16px}
+section{padding:36px 0;border-top:1px solid var(--line)}
+.hero{border-top:0;padding-top:24px}
+h1{font-size:clamp(32px,7vw,52px);line-height:1.1;margin:0 0 20px}
+h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:0 0 16px}
+.lede{color:var(--dim);max-width:60ch}
+.cmd{display:flex;align-items:center;gap:12px;background:#151a22;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:24px 0 8px}
+.cmd code{flex:1;overflow-x:auto;white-space:nowrap}
+.cmd button{background:none;color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:4px 10px;font:inherit;cursor:pointer}
+.cmd button:hover{color:var(--fg)}
+.fine{color:var(--dim);font-size:13px;margin:0 0 28px}
+.shot{width:100%;height:auto;border-radius:10px;margin-top:20px;display:block}
+.steps,.list{padding-left:20px;margin:0}
+.steps li,.list li{margin-bottom:12px}
+.list{list-style:none;padding:0}.list b{display:block}
+.rows .row{display:grid;grid-template-columns:70px 1fr 70px;gap:12px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.row .code{color:var(--acc)}.row .sev{text-align:right}
+.sev.error{color:var(--err)}.sev.warning{color:var(--warn)}.sev.info{color:var(--info)}
+details{border-bottom:1px solid var(--line);padding:10px 0}
+summary{cursor:pointer}details p{color:var(--dim);margin:8px 0 0}
+footer{max-width:760px;margin:0 auto;padding:36px 16px 60px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:520px){.rows .row{grid-template-columns:60px 1fr}.row .sev{display:none}}
