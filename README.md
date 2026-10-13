@@ -5,9 +5,9 @@
 **Catch breaking FastAPI changes before your clients do.**
 
 [![CI](https://github.com/himanshu007-creator/contractwatch/actions/workflows/ci.yml/badge.svg)](https://github.com/himanshu007-creator/contractwatch/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/contractwatch.svg)](https://pypi.org/project/contractwatch/)
-[![Python](https://img.shields.io/pypi/pyversions/contractwatch.svg)](https://pypi.org/project/contractwatch/)
-[![License](https://img.shields.io/pypi/l/contractwatch.svg)](LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/contractwatch.svg?cacheSeconds=3600)](https://pypi.org/project/contractwatch/)
+[![Python](https://img.shields.io/pypi/pyversions/contractwatch.svg?cacheSeconds=3600)](https://pypi.org/project/contractwatch/)
+[![License](https://img.shields.io/pypi/l/contractwatch.svg?cacheSeconds=3600)](LICENSE)
 
 </div>
 
